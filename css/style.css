@@ -1,0 +1,496 @@
+.tarif-cargo-plugin {
+    /* Admin page styles removed to use WordPress admin styles */
+
+    /* Frontend styles updated to match index.html design and colors */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9fafb;
+    color: #333;
+}
+
+/* Ensure all styles are scoped under .tarif-cargo-plugin */
+.tarif-cargo-plugin .container,
+.tarif-cargo-plugin label,
+.tarif-cargo-plugin input[type=text],
+.tarif-cargo-plugin input[type=number],
+.tarif-cargo-plugin select,
+.tarif-cargo-plugin button,
+.tarif-cargo-plugin .btn-cancel,
+.tarif-cargo-plugin .output,
+.tarif-cargo-plugin .error,
+.tarif-cargo-plugin .autocomplete-wrapper,
+.tarif-cargo-plugin .autocomplete-list,
+.tarif-cargo-plugin .autocomplete-list div,
+.tarif-cargo-plugin .modal,
+.tarif-cargo-plugin .modal-content,
+.tarif-cargo-plugin .modal-header,
+.tarif-cargo-plugin .modal-footer,
+.tarif-cargo-plugin .modal-footer button,
+.tarif-cargo-plugin .close-btn,
+.tarif-cargo-plugin .checkbox-label,
+.tarif-cargo-plugin table,
+.tarif-cargo-plugin th,
+.tarif-cargo-plugin td,
+.tarif-cargo-plugin tr:nth-child(even),
+.tarif-cargo-plugin tr:hover,
+.tarif-cargo-plugin .table-actions,
+.tarif-cargo-plugin .table-actions button,
+.tarif-cargo-plugin .table-actions button.btn-delete {
+    all: unset;
+    all: revert;
+}
+
+/* Container */
+.tarif-cargo-plugin .container {
+    max-width: 900px;
+    background: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(79, 70, 229, 0.15);
+    margin: 0 auto 50px auto;
+}
+
+/* Headings */
+.tarif-cargo-plugin h2 {
+    border-bottom: 2px solid #4f46e5;
+    padding-bottom: 6px;
+    margin-top: 40px;
+    color: #4f46e5;
+}
+
+/* Labels */
+.tarif-cargo-plugin label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: 600;
+}
+
+/* Inputs and selects */
+.tarif-cargo-plugin input[type=text],
+.tarif-cargo-plugin input[type=number],
+.tarif-cargo-plugin select {
+    width: 100%;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.tarif-cargo-plugin input[type=text]:focus,
+.tarif-cargo-plugin input[type=number]:focus,
+.tarif-cargo-plugin select:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 6px #a5b4fc;
+}
+
+/* Buttons */
+.tarif-cargo-plugin button {
+    background: #4f46e5;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-top: 6px;
+    transition: background 0.3s ease;
+}
+
+.tarif-cargo-plugin button:hover:not(.btn-cancel) {
+    background: #4338ca;
+}
+
+.tarif-cargo-plugin .btn-cancel {
+    background: #ef4444;
+}
+
+/* Table Style FRONTEND*/
+.tarif-cargo-plugin .tarif-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tarif-cargo-plugin .tarif-table th {
+    background-color: #10b981;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.tarif-cargo-plugin .tarif-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e5e7eb;
+    background-color: white;
+}
+
+.tarif-cargo-plugin .tarif-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Summary Style */
+.tarif-cargo-plugin .tarif-summary {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f0fdf4;
+    color: #064e3b;
+    border-left: 4px solid #10b981;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.1);
+}
+
+.tarif-cargo-plugin .tarif-summary strong {
+    color: #065f46;
+    font-weight: 700;
+    display: inline-block;
+    min-width: 100px;
+}
+
+/* Hover Effects */
+.tarif-cargo-plugin .tarif-table tr:hover td {
+    background-color: #f0fdf4;
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 768px) {
+    .tarif-cargo-plugin .tarif-table {
+        display: block;
+        width: 100%;
+        box-shadow: none;
+    }
+    
+    .tarif-cargo-plugin .tarif-table thead {
+        display: none;
+    }
+    
+    .tarif-cargo-plugin .tarif-table tbody,
+    .tarif-cargo-plugin .tarif-table tr,
+    .tarif-cargo-plugin .tarif-table td {
+        display: block;
+        width: 100%;
+    }
+    
+    .tarif-cargo-plugin .tarif-table tr {
+        margin-bottom: 20px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        position: relative;
+    }
+    
+    .tarif-cargo-plugin .tarif-table td {
+        padding: 10px 15px 10px 50%;
+        text-align: right;
+        position: relative;
+        border-bottom: 1px solid #e5e7eb;
+    }
+    
+    .tarif-cargo-plugin .tarif-table td:last-child {
+        border-bottom: none;
+    }
+    
+    .tarif-cargo-plugin .tarif-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        top: 10px;
+        width: calc(50% - 20px);
+        padding-right: 10px;
+        font-weight: 600;
+        color: #065f46;
+        text-align: left;
+        white-space: nowrap;
+    }
+    
+    /* Add data-labels to your HTML */
+    .tarif-cargo-plugin .tarif-table td:nth-child(1):before { content: "Kota Awal"; }
+    .tarif-cargo-plugin .tarif-table td:nth-child(2):before { content: "Kota Tujuan"; }
+    .tarif-cargo-plugin .tarif-table td:nth-child(3):before { content: "Layanan"; }
+    .tarif-cargo-plugin .tarif-table td:nth-child(4):before { content: "Tarif Per Kg"; }
+    
+    .tarif-cargo-plugin .tarif-summary {
+        padding: 15px;
+        margin-top: 15px;
+    }
+    
+    .tarif-cargo-plugin .tarif-summary p {
+        margin-bottom: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .tarif-cargo-plugin .tarif-summary strong {
+        min-width: 90px;
+        margin-right: 5px;
+        display: inline-block;
+    }
+    
+    .tarif-cargo-plugin .tarif-summary span {
+        flex: 1;
+        min-width: calc(100% - 100px);
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tarif-cargo-plugin .tarif-result {
+    animation: fadeIn 0.4s ease-out forwards;
+    overflow-x: auto;
+}
+
+/* Table styles ADMIN*/
+.tarif-cargo-plugin table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    font-size: 0.95rem;
+}
+
+.tarif-cargo-plugin th,
+.tarif-cargo-plugin td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: middle;
+    max-width: 120px;
+    word-wrap: break-word;
+}
+
+.tarif-cargo-plugin th {
+    background-color: #f3f4f6;
+    font-weight: 700;
+    color: #4f46e5;
+}
+
+.tarif-cargo-plugin tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.tarif-cargo-plugin tr:hover {
+    background-color: #e0e7ff;
+}
+
+/* Table actions */
+.tarif-cargo-plugin .table-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* Style for sortable table headers - remove button styles, keep clickable */
+.tarif-cargo-plugin th button.sort-btn {
+    all: unset;
+    cursor: pointer;
+    font-weight: 600;
+    color: #4f46e5;
+    border-bottom: 2px solid transparent;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.tarif-cargo-plugin th button.sort-btn:hover {
+    background-color: #4f46e5;
+    color: white;
+}
+
+/* Table actions buttons */
+.tarif-cargo-plugin .table-actions button {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-right: 4px;
+}
+
+/* Edit and Simpan buttons - blue */
+.tarif-cargo-plugin .table-actions button.btn-edit,
+.tarif-cargo-plugin .table-actions button.btn-save {
+    background-color: #4f46e5;
+}
+
+.tarif-cargo-plugin .table-actions button.btn-edit:hover,
+.tarif-cargo-plugin .table-actions button.btn-save:hover {
+    background-color: #4338ca;
+}
+
+/* Batal button - gray */
+.tarif-cargo-plugin .table-actions button.btn-cancel {
+    background-color: #6b7280;
+}
+
+.tarif-cargo-plugin .table-actions button.btn-cancel:hover {
+    background-color: #4b5563;
+}
+
+/* Delete button red - Enhanced Version */
+.tarif-cargo-plugin .table-actions button.btn-delete {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-right: 4px;
+    box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.tarif-cargo-plugin .table-actions button.btn-delete:hover {
+    background-color: #b91c1c;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(239, 68, 68, 0.3);
+}
+
+.tarif-cargo-plugin .table-actions button.btn-delete:active {
+    background-color: #991b1b;
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(239, 68, 68, 0.2);
+}
+
+/* Icon colors for edit and delete buttons */
+.tarif-cargo-plugin .table-actions button.btn-edit i {
+    color: darkgreen;
+}
+
+.tarif-cargo-plugin .table-actions button.btn-delete i {
+    color: red;
+}
+
+/* Autocomplete styles */
+.tarif-cargo-plugin .autocomplete-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.tarif-cargo-plugin .autocomplete-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1100;
+    border: 1.5px solid #cbd5e1;
+    border-top: none;
+    background: white;
+    max-height: 180px;
+    overflow-y: auto;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.tarif-cargo-plugin .autocomplete-list div {
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.tarif-cargo-plugin .autocomplete-list div:hover {
+    background: #4f46e5;
+    color: white;
+}
+
+/* Style untuk nota berat */
+.tarif-cargo-plugin .weight-note {
+    display: block;
+    font-size: 0.75rem;
+    color: #ef4444;
+    margin-top: 4px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Perubahan untuk input agar lebih rapi */
+.tarif-cargo-plugin .tarif-cargo-input {
+    margin-top: 6px; /* Sedikit lebih rapat dengan nota */
+}
+
+/* Modal styles */
+.tarif-cargo-plugin .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+}
+
+.tarif-cargo-plugin .modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px 30px;
+    border-radius: 12px;
+    max-width: 450px;
+    box-shadow: 0 8px 24px rgba(79, 70, 229, 0.15);
+    position: relative;
+}
+
+.tarif-cargo-plugin .modal-header {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #4f46e5;
+    border-bottom: 2px solid #4f46e5;
+    padding-bottom: 6px;
+    margin-bottom: 16px;
+}
+
+.tarif-cargo-plugin .modal-footer {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.tarif-cargo-plugin .modal-footer button {
+    min-width: 80px;
+}
+
+.tarif-cargo-plugin .close-btn {
+    position: absolute;
+    top: 12px; right: 18px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #777;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.tarif-cargo-plugin .close-btn:hover {
+    color: #4f46e5;
+}
+
+/* Checkbox label inline */
+.tarif-cargo-plugin .checkbox-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
